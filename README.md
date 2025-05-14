@@ -50,10 +50,9 @@ To use this scaffolding script:
 
 1.  **Clone or Download the Script**:
     ```bash
-    # If this script is part of a Git repository:
-    # git clone [https://github.com/hllstr/ansible-setup-wizard.git](https://github.com/hllstr/ansible-setup-wizard.git)
-    # cd ansible-setup-wizard/
-    #
+    git clone https://github.com/hllstr/ansible-setup-wizard.git
+    cd ansible-setup-wizard/
+    
     # Or, if you just have the script file:
     # Ensure ansible-setup-wizard.sh is in your current directory.
     ```
