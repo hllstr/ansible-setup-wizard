@@ -1,4 +1,5 @@
 
+---
 
 ```markdown
 # ansible-auto-setup
@@ -149,3 +150,6 @@ Feel free to fork and enhance!
 
 Made with ❤️ to help you automate more with less YAML writing.
 ```
+
+---
+
