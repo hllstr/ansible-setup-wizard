@@ -95,7 +95,34 @@ Upon completion, a new directory named `ansible-project/` (this is the default p
 
 The script generates the following structure within the `ansible-project/` directory:
 ```
-ansible-project/├── ansible.cfg             # Main Ansible configuration for this project.│                           # Defines inventory path, roles path, default connection settings,│                           # host key checking, and privilege escalation.├── inventory/│   └── hosts.ini           # Default inventory file. Defines host groups (e.g., [linux_hosts],│                           # [windows_hosts]) and host-specific connection variables│                           # (especially for WinRM).├── group_vars/             # Directory to store variables applicable to entire host groups.│                           # Example: group_vars/linux_hosts.yml or group_vars/all.yml. (Created empty)├── host_vars/              # Directory to store variables specific to individual hosts.│                           # Example: host_vars/server1.example.com.yml. (Created empty)├── playbooks/│   └── main.yml            # The main playbook that orchestrates the deployment by applying│                           # roles to the defined host groups.├── roles/                  # Contains all the Ansible roles for service management.│   └── _/     # Each selected service gets its own role directory (e.g., roles/linux_apache2/).│       ├── tasks/main.yml    # Core tasks for installing and configuring the service.│       │                     # Contains placeholders and TODO comments.│       ├── handlers/main.yml # Handlers triggered by tasks (e.g., to restart a service).│       ├── templates/        # Directory for role-specific Jinja2 templates.│       ├── vars/main.yml     # Variables specific to this role (higher precedence than defaults).│       ├── defaults/main.yml # Default variables for the role (lowest precedence, easily overridden).│       └── meta/main.yml     # Role metadata, including dependencies and platform support.├── templates/                # Project-level Jinja2 templates. These are copied from your│                           # external jinja2-templates/ source directory if they were│                           # selected based on the services you chose.└── README.md               # A specific README for the generated Ansible project,# detailing its structure and how to use it.
+ansible-project/
+├── ansible.cfg             # Main Ansible configuration for this project.
+│                           # Defines inventory path, roles path, default connection settings,
+│                           # host key checking, and privilege escalation.
+├── inventory/
+│   └── hosts.ini           # Default inventory file. Defines host groups (e.g., [linux_hosts],
+│                           # [windows_hosts]) and host-specific connection variables
+│                           # (especially for WinRM).
+├── group_vars/             # Directory to store variables applicable to entire host groups.
+│                           # Example: group_vars/linux_hosts.yml or group_vars/all.yml. (Created empty)
+├── host_vars/              # Directory to store variables specific to individual hosts.
+│                           # Example: host_vars/server1.example.com.yml. (Created empty)
+├── playbooks/
+│   └── main.yml            # The main playbook that orchestrates the deployment by applying
+│                           # roles to the defined host groups.
+├── roles/                  # Contains all the Ansible roles for service management.
+│   └── _/     # Each selected service gets its own role directory (e.g., roles/linux_apache2/).
+│       ├── tasks/main.yml    # Core tasks for installing and configuring the service.
+│       │                     # Contains placeholders and TODO comments.
+│       ├── handlers/main.yml # Handlers triggered by tasks (e.g., to restart a service).
+│       ├── templates/        # Directory for role-specific Jinja2 templates.
+│       ├── vars/main.yml     # Variables specific to this role (higher precedence than defaults).
+│       ├── defaults/main.yml # Default variables for the role (lowest precedence, easily overridden).
+│       └── meta/main.yml     # Role metadata, including dependencies and platform support.
+├── templates/                # Project-level Jinja2 templates. These are copied from your
+│                           # external jinja2-templates/ source directory if they were
+│                           # selected based on the services you chose.
+└── README.md               # A specific README for the generated Ansible project, detailing its structure and how to use it.
 ```
 ## Using the Generated Ansible Project
 
