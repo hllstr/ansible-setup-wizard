@@ -1,13 +1,9 @@
-
----
-
-```markdown
 # ansible-auto-setup
-
+```markdown
 > A Bash-powered interactive Ansible project generator for automating basic service deployments on Linux and Windows systems.
 
 This tool helps you quickly scaffold a production-style Ansible project by answering a few prompts. It generates roles, inventories, configuration, and integrates Jinja2 templates — all tailored to the services and hosts you define.
-
+```
 ---
 
 ## 🧩 Features
@@ -149,7 +145,6 @@ Feel free to fork and enhance!
 ---
 
 Made with ❤️ to help you automate more with less YAML writing.
-```
 
 ---
 
